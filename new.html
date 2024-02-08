@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cipher Pearl</title>
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <button class="chocolate-button">
+      <div class="crumbs"></div>
+      <span class="bar">
+        <span class="text"> Chocolate Bar</span>
+      </span>
+    </button>
+
+    <div class="instructions">Click on Chocolate</div>
+
+    <script>
+      console.clear();
+
+      const elButton = document.querySelector(".chocolate-button");
+
+      elButton.addEventListener("mousedown", (event) => {
+        if (!elButton.matches(":focus")) {
+          elButton.style.setProperty("--x", event.offsetX);
+          elButton.style.setProperty("--y", event.offsetY);
+        }
+      });
+    </script>
+    <footer class="footer">&copy; Copyright 2024: Under the creater i.e.YD</footer>
+
+  </body>
+</html>
